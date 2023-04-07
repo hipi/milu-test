@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: 'MiluDialog'
+  name: 'MiluDialog',
 };
 </script>
 <style lang="scss">

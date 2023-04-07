@@ -2,11 +2,11 @@
   <div id="layout" class="layout-default">
     <HeaderLayout />
     <div class="container">
-      <TopWidget/>
+      <TopWidget />
       <RouterView />
     </div>
     <FooterLayout />
-    <FixedBar/>
+    <FixedBar />
   </div>
 </template>
 <script setup>

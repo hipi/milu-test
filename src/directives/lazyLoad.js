@@ -11,7 +11,7 @@ export default {
           }
         },
         {
-          threshold: 0 //进入到可视区交界就开始观察
+          threshold: 0, //进入到可视区交界就开始观察
         }
       );
       el.__observe__ = observe;
@@ -22,5 +22,5 @@ export default {
   },
   beforeUnmount(el) {
     el.__observe__ && el.__observe__.disconnect();
-  }
+  },
 };

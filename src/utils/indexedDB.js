@@ -139,7 +139,7 @@ import localforage from 'localforage';
 localforage.config({
   driver: [localforage.INDEXEDDB, localforage.LOCALSTORAGE],
   name: 'milu-project',
-  storeName: 'milu_store'
+  storeName: 'milu_store',
 });
 
 const miluStorage = localforage;

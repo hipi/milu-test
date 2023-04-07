@@ -48,70 +48,70 @@ body {
     overflow: hidden;
   }
 }
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-// 滚动条两端
-::-webkit-scrollbar-button {
-  height: 0;
-  width: 0;
-}
-// 滚动条交叉的
-::-webkit-scrollbar-corner {
-  background: transparent;
-  border-radius: 0 0 6px 0;
-}
-// 滚条动条里
-::-webkit-scrollbar-thumb {
-  background-color: #cdcdcd;
-  border-radius: 3px;
-  &:hover {
-    background-color: #a6a6a6;
-  }
-  &:active {
-    background-color: #9a9a9a;
-  }
-}
-
-@supports (scrollbar-width: thin) {
-  * {
-    scrollbar-width: thin;
-    scrollbar-color: #cdcdcd transparent; // 第一个值滚动条本身背景 第二个是凹槽背景
-  }
-}
-
-@media (max-width: 768px) {
-  ::-webkit-scrollbar {
-    display: none;
-  }
-  @supports (scrollbar-width: thin) {
-    * {
-      scrollbar-width: 'none';
-    }
-  }
-}
-
-html.is-dark {
-  ::-webkit-scrollbar-thumb {
-    background-color: var(--primary-color);
-    border-radius: 3px;
-    &:hover {
-      background-color: var(--primary-color);
-    }
-    &:active {
-      background-color: var(--primary-color);
-    }
-  }
-
-  @supports (scrollbar-width: thin) {
-    * {
-      scrollbar-width: thin;
-      scrollbar-color: var(--primary-color) transparent; // 第一个值滚动条本身背景 第二个是凹槽背景
-    }
-  }
-}
-
-// html.is-dark{
-//   color-scheme: dark;
+// ::-webkit-scrollbar {
+//   width: 8px;
+//   height: 8px;
 // }
+// // 滚动条两端
+// ::-webkit-scrollbar-button {
+//   height: 0;
+//   width: 0;
+// }
+// // 滚动条交叉的
+// ::-webkit-scrollbar-corner {
+//   background: transparent;
+//   border-radius: 0 0 6px 0;
+// }
+// // 滚条动条里
+// ::-webkit-scrollbar-thumb {
+//   background-color: #cdcdcd;
+//   border-radius: 3px;
+//   &:hover {
+//     background-color: #a6a6a6;
+//   }
+//   &:active {
+//     background-color: #9a9a9a;
+//   }
+// }
+
+// @supports (scrollbar-width: thin) {
+//   * {
+//     scrollbar-width: thin;
+//     scrollbar-color: #cdcdcd transparent; // 第一个值滚动条本身背景 第二个是凹槽背景
+//   }
+// }
+
+// @media (max-width: 768px) {
+//   ::-webkit-scrollbar {
+//     display: none;
+//   }
+//   @supports (scrollbar-width: thin) {
+//     * {
+//       scrollbar-width: 'none';
+//     }
+//   }
+// }
+
+// html.is-dark {
+//   ::-webkit-scrollbar-thumb {
+//     background-color: var(--primary-color);
+//     border-radius: 3px;
+//     &:hover {
+//       background-color: var(--primary-color);
+//     }
+//     &:active {
+//       background-color: var(--primary-color);
+//     }
+//   }
+
+//   @supports (scrollbar-width: thin) {
+//     * {
+//       scrollbar-width: thin;
+//       scrollbar-color: var(--primary-color) transparent; // 第一个值滚动条本身背景 第二个是凹槽背景
+//     }
+//   }
+// }
+
+html.is-dark{
+  color-scheme: dark;
+}

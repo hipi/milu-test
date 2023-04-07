@@ -36,29 +36,26 @@ export default defineConfig({
       // 指定需要缓存的图标文件夹
       iconDirs: [path.resolve('src/icons')],
       // 指定symbolId格式
-      symbolId: 'icon-[dir]-[name]'
+      symbolId: 'icon-[dir]-[name]',
     }),
     AutoImport({
       imports: ['vue', 'vue-router'], // 自动导入vue和vue-router相关函数
-      dirs: [
-        './src/hooks',
-        './src/components' 
-      ],
+      dirs: ['./src/hooks', './src/components'],
       resolvers: [
         ElementPlusResolver({
           importStyle: 'sass',
         }),
       ],
       eslintrc: {
-        enabled: true
-      }
+        enabled: true,
+      },
     }),
     Components({
       resolvers: [
         ElementPlusResolver({
-          importStyle: 'sass'
-        })
-      ]
+          importStyle: 'sass',
+        }),
+      ],
     }),
     VitePWA({
       workbox: {
@@ -72,14 +69,14 @@ export default defineConfig({
               cacheName: 'fonts-cache',
               expiration: {
                 maxEntries: 200,
-                maxAgeSeconds: 60 * 60 * 24 * 365 // <== 365 days
+                maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
               },
               cacheableResponse: {
-                statuses: [0, 200]
-              }
-            }
-          }
-        ]
+                statuses: [0, 200],
+              },
+            },
+          },
+        ],
       },
       registerType: 'autoUpdate',
       manifest: {
@@ -89,7 +86,7 @@ export default defineConfig({
         icons: [
           { src: 'icon/icon-192.png', sizes: '192x192', type: 'image/png' },
           { src: 'icon/icon-256.png', sizes: '256x256', type: 'image/png' },
-          { src: 'icon/icon-512.png', sizes: '512x512', type: 'image/png' }
+          { src: 'icon/icon-512.png', sizes: '512x512', type: 'image/png' },
         ],
         start_url: '/',
         display: 'standalone',
@@ -97,20 +94,20 @@ export default defineConfig({
         lang: 'zh-CN',
         scope: '/',
         description:
-          '一个专注于收集和分享优质免费实用资源的导航，包含了效率工具，设计素材，软件资源，影视站点，技术开发等各类实用网址。'
-      }
+          '一个专注于收集和分享优质免费实用资源的导航，包含了效率工具，设计素材，软件资源，影视站点，技术开发等各类实用网址。',
+      },
     }),
-    checkBrowser()
+    checkBrowser(),
   ],
   resolve: {
     alias: {
-      '@': path.resolve('./src')
-    }
+      '@': path.resolve('./src'),
+    },
   },
   css: {
     postcss: {
-      plugins: [autoprefixer]
-    }
+      plugins: [autoprefixer],
+    },
   },
   build: {
     // 必需要加 不然默认 ['es2020', 'edge88', 'firefox78', 'chrome87', 'safari14']
@@ -127,9 +124,9 @@ export default defineConfig({
           // 拆分代码,配置完后自动按需加载
           bucket: ['vue', 'vue-router', 'pinia', '@vueuse/head'],
           libs: ['dayjs', 'crypto-js', 'localforage', 'js-cookie'],
-          ui: ['element-plus']
-        }
-      }
-    }
-  }
+          ui: ['element-plus'],
+        },
+      },
+    },
+  },
 });

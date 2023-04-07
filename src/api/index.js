@@ -26,7 +26,7 @@ export const getUrls = async () => {
     );
     const item = {
       exp: dayjs().add(10, 'minute').valueOf(),
-      data
+      data,
     };
     miluStorage.setItem('urls', item);
     return data;
@@ -85,19 +85,19 @@ export const getHotCategory = async () => {
       method: 'post',
       headers: {
         'Content-Type': 'application/json',
-        s: sk()
-      }
+        s: sk(),
+      },
     }).then((res) => res.json());
 
     const processedData = data.map(({ category, id, name, type }) => ({
       category,
       id,
       name,
-      type
+      type,
     }));
     const categoryStorageData = {
       exp: dayjs().add(30, 'day').valueOf(),
-      data: processedData
+      data: processedData,
     };
     miluStorage.setItem('hot-category', categoryStorageData);
     return data;
@@ -113,8 +113,8 @@ export const getHotListById = (data) =>
     body: JSON.stringify(data),
     headers: {
       'Content-Type': 'application/json',
-      s: sk()
-    }
+      s: sk(),
+    },
   }).then((res) => res.json());
 
 // 魔盒登录
@@ -123,14 +123,14 @@ export const login = (data) =>
     method: 'post',
     body: JSON.stringify(data),
     headers: {
-      'Content-Type': 'application/json'
-    }
+      'Content-Type': 'application/json',
+    },
   }).then((res) => res.json());
 
 // 获取魔盒链接
 export const getPandoraUrls = () =>
   fetch('https://service-p1kt0sax-1254063733.sh.apigw.tencentcs.com/release/vip', {
     headers: {
-      token: Cookies.get('404l-token')
-    }
+      token: Cookies.get('404l-token'),
+    },
   }).then((res) => res.json());

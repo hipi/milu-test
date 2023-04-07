@@ -8,16 +8,16 @@ import { computed } from 'vue';
 const $props = defineProps({
   prefix: {
     type: String,
-    default: 'icon'
+    default: 'icon',
   },
   name: {
     type: String,
-    required: true
+    required: true,
   },
   color: {
     type: String,
-    default: 'currentColor'
-  }
+    default: 'currentColor',
+  },
 });
 const symbolId = computed(() => `#${$props.prefix}-${$props.name}`);
 </script>

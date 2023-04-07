@@ -23,8 +23,8 @@ const routes = [
       {
         path: '',
         name: 'home',
-        component: HomePage
-      }
+        component: HomePage,
+      },
       // {
       //   path: 'category/:categoryId',
       //   name: 'home-category',
@@ -55,7 +55,7 @@ const routes = [
       //   name: 'about',
       //   component: AboutPage,
       // },
-    ]
+    ],
   },
   // {
   //   path: '/link-jump',
@@ -87,7 +87,7 @@ const router = createRouter({
           resolve({
             el: to.hash,
             behavior: 'smooth',
-            top: 84
+            top: 84,
           });
         }, 300);
       });
@@ -100,7 +100,7 @@ const router = createRouter({
     } else {
       return { top: 0 };
     }
-  }
+  },
 });
 
 // 路由拦截

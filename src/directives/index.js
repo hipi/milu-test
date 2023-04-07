@@ -6,5 +6,5 @@ const defineDirective = (app) => {
 export default {
   install(app) {
     defineDirective(app); //自定义指令
-  }
+  },
 };

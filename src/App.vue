@@ -6,7 +6,7 @@ import { useSettingsStore } from '@/stores/settings';
 import { useHead } from '@vueuse/head';
 
 useHead({
-  titleTemplate: (title) => (title ? `${title} - 迷鹿导航` : '迷鹿导航 - 实用的网站导航')
+  titleTemplate: (title) => (title ? `${title} - 迷鹿导航` : '迷鹿导航 - 实用的网站导航'),
 });
 
 const settingsStore = useSettingsStore();
@@ -21,7 +21,7 @@ watch(
     }
   },
   {
-    immediate: true
+    immediate: true,
   }
 );
 </script>

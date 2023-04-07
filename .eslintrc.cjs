@@ -1,5 +1,5 @@
 /* eslint-env node */
-require('@rushstack/eslint-patch/modern-module-resolution')
+require('@rushstack/eslint-patch/modern-module-resolution');
 
 module.exports = {
   root: true,
@@ -7,14 +7,14 @@ module.exports = {
     node: true,
     browser: true,
   },
-  'extends': [
+  extends: [
     'plugin:vue/vue3-essential',
     'eslint:recommended',
-    '@vue/eslint-config-prettier/skip-formatting',
-    './.eslintrc-auto-import.json'
+    '@vue/eslint-config-prettier',
+    './.eslintrc-auto-import.json',
   ],
   parserOptions: {
-    ecmaVersion: 'latest'
+    ecmaVersion: 'latest',
   },
   globals: {
     ElMessage: 'readonly',
@@ -25,4 +25,4 @@ module.exports = {
     'no-unused-vars': 'off',
     'vue/require-default-prop': 'off', // prop default
   },
-}
+};

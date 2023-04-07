@@ -128,7 +128,7 @@ export function toCamel(str) {
 export const offset2 = (node) => {
   var offest = {
     top: 0,
-    left: 0
+    left: 0,
   };
   // 当前为IE11以下, 直接返回{top: 0, left: 0}
   if (!node.getClientRects().length) {
@@ -145,14 +145,14 @@ export const offset2 = (node) => {
   var docElement = node.ownerDocument.documentElement;
   return {
     top: offest.top + window.pageYOffset - docElement.clientTop,
-    left: offest.left + window.pageXOffset - docElement.clientLeft
+    left: offest.left + window.pageXOffset - docElement.clientLeft,
   };
 };
 
 export const offset = (ele) => {
   let result = {
     top: 0,
-    left: 0
+    left: 0,
   };
   /*
    * nodeType 属性返回以数字值返回指定节点的节点类型。

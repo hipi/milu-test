@@ -49,7 +49,7 @@ const settingsStore = useSettingsStore();
 const menuArr = [
   { name: '首页', href: '/', type: 'route' },
   { name: '今日热榜', href: '/hot', type: 'route' },
-  { name: '关于我们', href: '/about', type: 'route' }
+  { name: '关于我们', href: '/about', type: 'route' },
 ];
 const $router = useRouter();
 const mobileMenuRef = ref(null);

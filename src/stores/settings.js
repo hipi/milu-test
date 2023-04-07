@@ -18,7 +18,7 @@ const getCurrentAutoThemeDark = () => {
 export const useSettingsStore = defineStore('settings', {
   state: () => ({
     isMobile: isMobileQuery,
-    themeAppearance: localStorage.getItem('theme-appearance')
+    themeAppearance: localStorage.getItem('theme-appearance'),
   }),
   getters: {
     isDark: (state) => {
@@ -28,7 +28,7 @@ export const useSettingsStore = defineStore('settings', {
       } else {
         return state.themeAppearance === 'dark';
       }
-    }
+    },
   },
 
   actions: {
@@ -43,6 +43,6 @@ export const useSettingsStore = defineStore('settings', {
         this.themeAppearance = nowState ? 'dark' : 'light';
         localStorage.setItem('theme-appearance', nowState ? 'dark' : 'light');
       }
-    }
-  }
+    },
+  },
 });
