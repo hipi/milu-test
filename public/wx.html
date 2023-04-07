@@ -1,0 +1,103 @@
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>使用浏览器打开</title>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta content="false" name="twcClient" id="twcClient" />
+  <meta name="aplus-touch" content="1" />
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      -webkit-text-size-adjust: none !important;
+      text-size-adjust: none !important;
+      -moz-text-size-adjust: none !important;
+      background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+      color: #fff;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .top-bar {
+      position: relative;
+    }
+
+    .top-bar img {
+      width: 100%;
+      display: block;
+    }
+
+    .top-bar .top-info {
+      position: absolute;
+      font-size: 12px;
+      top: 30px;
+      left: 0px;
+      padding: 0 20px;
+      line-height: 2;
+      letter-spacing: 1px;
+    }
+
+    .top-bar .top-info img {
+      display: inline-block;
+      width: 20px;
+      vertical-align: middle;
+    }
+
+    .main-info {
+      padding: 0 20px;
+      text-align: center;
+      letter-spacing: 1px;
+      margin-top: 20%;
+    }
+
+    .main-info .info-list {
+      margin: 20px 0;
+    }
+
+    .main-info .link {
+      font-family: monaco, menlo, consolas, courier new, courier, monospace;
+      color: #88ff8c;
+      letter-spacing: normal;
+      user-select: all;
+      -moz-user-select: all;
+      -webkit-user-select: all;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="content">
+    <div class="top-bar">
+      <img src="https://bu.dusays.com/2021/04/24/10aa0d1f766b1.png" />
+      <div class="top-info">
+        <div>
+          点击右上角选择
+          <img src="https://bu.dusays.com/2021/04/25/61a79462366a4.png" />
+          ，或其他浏览器打开
+        </div>
+        <div>就可以继续浏览本站哦~</div>
+      </div>
+    </div>
+    <div class="main-info">
+      <div class="info-list">本页面来自</div>
+      <div class="info-list link" style="user-select:all">
+        <script>
+          document.write(location.href);
+        </script>
+      </div>
+      <div class="info-list">请点击右上角使用浏览器打开</div>
+      <div class="info-list">也可复制以上网址自行在浏览器粘贴打开</div>
+    </div>
+  </div>
+</body>
+
+</html>

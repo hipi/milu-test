@@ -1,0 +1,43 @@
+{
+  "name": "milu-nav-vue-next",
+  "version": "4.3.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite --port 5186 --host",
+    "build": "vite build",
+    "preview": "vite preview --port 5186",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "format": "prettier --write src/",
+    "deploy": "node bin/deploy.mjs"
+  },
+  "dependencies": {
+    "@vueuse/head": "^1.1.23",
+    "crypto-js": "^4.1.1",
+    "dayjs": "^1.11.7",
+    "element-plus": "^2.3.2",
+    "js-cookie": "^3.0.1",
+    "localforage": "^1.10.0",
+    "pinia": "^2.0.33",
+    "vue": "^3.2.47",
+    "vue-router": "^4.1.6"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.2.0",
+    "@vitejs/plugin-vue": "^4.1.0",
+    "@vue/eslint-config-prettier": "^7.1.0",
+    "archiver": "^5.3.1",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.37.0",
+    "eslint-plugin-vue": "^9.10.0",
+    "postcss": "^8.4.21",
+    "prettier": "^2.8.7",
+    "sass": "^1.61.0",
+    "ssh2": "^1.11.0",
+    "unplugin-auto-import": "^0.15.2",
+    "unplugin-vue-components": "^0.24.1",
+    "vite": "^4.2.1",
+    "vite-plugin-pwa": "^0.14.7",
+    "vite-plugin-svg-icons": "^2.0.1",
+    "vite-plugin-vue-setup-extend": "^0.4.0"
+  }
+}
